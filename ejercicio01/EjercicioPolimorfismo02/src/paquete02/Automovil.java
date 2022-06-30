@@ -9,6 +9,29 @@ package paquete02;
  *
  * @author reroes
  */
-public class Automovil {
+public abstract class Automovil {
+    protected String nombresP;
+    protected String placa;
+    protected double valorCancelar;
+   
+    
+    public void establecerNombresP(String n){
+        nombresP = n;
+    }
+  
+    public void establecerPlaca(String n){
+        placa = n;
+    }
+    
+    public abstract void calcularValorCancelar();
+    
+    public String obtenerNombresP(){
+        return nombresP;  
+    }
+ 
+    
+    public String obtenerPlaca(){
+        return placa; 
+    }
     
 }
