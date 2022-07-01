@@ -4,25 +4,25 @@
  * and open the template in the editor.
  */
 package paquete2;
-
+import paquete4.Propietario;
 /**
  *
  * @author reroes
  */
 public abstract class Arriendo {
     
-    protected String nombreArrendatario;
+    protected Propietario arrendatario;
     protected double arriendoMensual;
     protected double cuotaBase;
     
-    public Arriendo(String nombre, double cuotaB){
+    public Arriendo(Propietario ar, double cuotaB){
         // nombreArrendatario = nombre;
-        establecerNombreArrendatario(nombre);
+        establecerArrendatario(ar);
         cuotaBase = cuotaB;
     }
     
-    public void establecerNombreArrendatario(String nombre){
-        nombreArrendatario = nombre;
+    public void establecerArrendatario(Propietario a){
+        arrendatario = a;
     }
     
     public void establecerCuotaBase(double x){
@@ -31,8 +31,8 @@ public abstract class Arriendo {
     
     public abstract void establecerArriendoMensual();
     
-    public String obtenerNombreArrendatario(){
-        return nombreArrendatario;
+    public Propietario obtenerArrendatario(){
+        return arrendatario;
     }
     
     public double obtenerCuotaBase(){

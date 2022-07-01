@@ -14,20 +14,25 @@ import paquete3.ArriendoLocalSesiones;
 public class Ejecutor {
     public static void main(String[] args) {
         
+        Propietario arr1 = new Propietario("Christian", "Shepherd", 30);
+        Propietario arr2 = new Propietario("Andrew", "Schroeder", 31);
+        Propietario arr3 = new Propietario("Angela", " Watson", 32);
+        
+        
         ArrayList<Arriendo> listaArriendos = new ArrayList<>();
         
         ArriendoLocalComida arriendoComida = new ArriendoLocalComida(
-                "Christian Shepherd", 300);
+                arr1, 300);
         arriendoComida.establecerIva(10); // en porcentaje
         arriendoComida.establecerValorAgua(20.2); // en $
         arriendoComida.establecerValorLuz(40.2); // en $
         
         ArriendoLocalComercial arriendoComercial = new ArriendoLocalComercial(
-                "Andrew Schroeder", 400);
+                arr2, 400);
         arriendoComercial.establecerValorAdicionalFijo(100); // en $
         
         ArriendoLocalSesiones arriendoSesiones = new ArriendoLocalSesiones(
-                "Angela Watson", 350);
+                arr3, 350);
         arriendoSesiones.establecerValorSillas(10); // en $
         arriendoSesiones.establecerValorAmplificacion(20); // en $
         
